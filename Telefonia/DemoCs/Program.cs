@@ -156,7 +156,7 @@ namespace DemoCs
          //Console.WriteLine("");
          //Console.WriteLine();
          Console.WriteLine(divisor);
-         Console.WriteLine(" presione una tecla para salir ");
+         Console.WriteLine("\n presione una tecla para salir ");
          Console.ReadKey();
       }
 
