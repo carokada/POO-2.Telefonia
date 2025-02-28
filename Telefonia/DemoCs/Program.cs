@@ -99,6 +99,7 @@ namespace DemoCs
          Console.WriteLine($" - {datos2}");
          Console.WriteLine($" - {datos3}");
 
+         Console.WriteLine();
          Console.WriteLine(divisor);
          Console.WriteLine(" creando paquetes...");
          Paquete paquete1 = new Paquete();
