@@ -12,5 +12,10 @@ namespace EntidadesCs
       {
          Dni = dni;
       }
+
+      public override string ToString()
+      {
+         return $"{Nombre} ({Dni})";
+      }
    }
 }

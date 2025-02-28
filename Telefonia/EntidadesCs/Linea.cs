@@ -7,18 +7,23 @@ namespace EntidadesCs
    public class Linea
    {
       private Equipo equipo; // asoc simple equipo
+      public Cliente Cliente { get; set; } // asoc simple cliente
+      public IPlan Plan { get; set; }
 
       public ushort CodigoArea { get; set; }
       public uint Numero { get; set; }
-      public string Estado { get; private set; }
+      // etiqueta readonly: no se puede cambiar el valor de la var (casi como una const) 
+      // private set: se puede modificar pero solo a nivel de objeto.
+      public string Estado { get; private set; } 
 
-      public Linea(ushort codigoArea, uint numero, Equipo equipo)
+      public Linea(ushort codigoArea, uint numero, Equipo equipo, Cliente cliente)
       {
          CodigoArea = codigoArea;
          Numero = numero;
          Equipo = equipo;
+         Cliente = cliente;
 
-         Reactivar(); // esta bien aplicado ??
+         Reactivar(); // esta bien aplicado OK
       }
 
       public void Suspender()
@@ -41,11 +46,11 @@ namespace EntidadesCs
       {
          if (Estado == "suspendida")
          {
-            return $"{CodigoArea}-{Numero} ({Estado})";
+            return $"{Cliente.Nombre}: {CodigoArea}-{Numero} ({Estado})";
          }
          else
          {
-            return $"{CodigoArea}-{Numero}";
+            return $"{Cliente.Nombre}: {CodigoArea}-{Numero}";
          }
       }
    }

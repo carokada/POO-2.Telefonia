@@ -54,12 +54,22 @@ namespace EntidadesCs
 
       public string GetDisponibleToString() //IPlan
       {
-         return $"{} de {ToString()}"; // cadena q concatena el rtdo del metodo homonimo de los serv asociados
+         string disponibles = "";
+         foreach (var servicio in servicios)
+         {
+            disponibles += servicio.GetDisponibleToString() + " ";
+         }
+         return $"{disponibles}"; // cadena q concatena el rtdo del metodo homonimo de los serv asociados
       }
 
       public string GetConsumosToString() //IPlan
       {
-         return $""; // total de consumos en string
+         string consumos = "";
+         foreach (var servicio in servicios)
+         {
+            consumos += servicio.GetConsumosToString() + " ";
+         }
+         return $"{consumos}"; // total de consumos en string
       }
    }
 }

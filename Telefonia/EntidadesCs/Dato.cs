@@ -8,7 +8,11 @@ namespace EntidadesCs
    {
       public Dato(decimal precio, uint credito) : base(precio, credito) { }
 
-      //public override uint NuevoConsumo(); ??
+      public override void NuevoConsumo(uint valor)
+      {
+         // conversiones de mb a byte ?? 
+         consumos.Add(valor);
+      }
 
       public override string ToString()
       {

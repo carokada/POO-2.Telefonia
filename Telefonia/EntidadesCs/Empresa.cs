@@ -12,5 +12,10 @@ namespace EntidadesCs
       {
          Cuit_cuil = cuit_cuil;
       }
+
+      public override string ToString()
+      {
+         return $"{Nombre} ({Cuit_cuil})";
+      }
    }
 }
