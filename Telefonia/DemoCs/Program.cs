@@ -148,7 +148,7 @@ namespace DemoCs
          Console.WriteLine($" consumos de paquete {paquete3.Nombre}: ");
          Console.WriteLine(paquete3.GetConsumosToString());
 
-         Console.WriteLine("\n GetDisponibleToString()");
+         Console.WriteLine(" GetDisponibleToString()");
          Console.WriteLine($" disponible de {paquete1.Nombre}:");
          Console.WriteLine(paquete1.GetDisponibleToString());
          Console.WriteLine($" disponible de {paquete3.Nombre}");

@@ -52,7 +52,7 @@ namespace EntidadesCs
 
       public string GetConsumosToString()
       {
-         return $"{GetConsumos()}"; // total de consumos en string
+         return $"{GetConsumos()} de {ToString()}"; // total de consumos en string
       }
    }
 }
