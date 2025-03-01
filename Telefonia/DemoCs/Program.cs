@@ -17,7 +17,7 @@ namespace DemoCs
          Marca marca1 = new Marca("Samsung");
          Marca marca2 = new Marca("Motorola");
          Marca marca3 = new Marca("IPhone");
-         Console.WriteLine(" marcas cargadas: ");
+         Console.WriteLine("\n marcas cargadas: ");
          Console.WriteLine(marca1);
          Console.WriteLine(marca2);
          Console.WriteLine(marca3);
@@ -27,7 +27,7 @@ namespace DemoCs
          Modelo modelo1 = new Modelo("Z Flip 6", marca1);
          Modelo modelo2 = new Modelo("Razr 50 Ultra", marca2);
          Modelo modelo3 = new Modelo("15", marca3);
-         Console.WriteLine(" modelos cargados: ");
+         Console.WriteLine("\n modelos cargados: ");
          Console.WriteLine(modelo1);
          Console.WriteLine(modelo2);
          Console.WriteLine(modelo3);
@@ -37,7 +37,7 @@ namespace DemoCs
          Equipo equipo1 = new Equipo(modelo1, "123");
          Equipo equipo2 = new Equipo(modelo2, "124");
          Equipo equipo3 = new Equipo(modelo3, "125");
-         Console.WriteLine(" equipos cargados: ");
+         Console.WriteLine("\n equipos cargados: ");
          Console.WriteLine(equipo1);
          Console.WriteLine(equipo2);
          Console.WriteLine(equipo3);
@@ -50,11 +50,11 @@ namespace DemoCs
          Empresa empresa1 = new Empresa("California", "123456789");
          Empresa empresa2 = new Empresa("Todo Frio", "123456789");
          Empresa empresa3 = new Empresa("Anyway", "123456789");
-         Console.WriteLine(" personas cargadas: ");
+         Console.WriteLine("\n -> personas cargadas: ");
          Console.WriteLine(persona1);
          Console.WriteLine(persona2);
          Console.WriteLine(persona3);
-         Console.WriteLine(" empresas cargadas: ");
+         Console.WriteLine("\n -> empresas cargadas: ");
          Console.WriteLine(empresa1);
          Console.WriteLine(empresa2);
          Console.WriteLine(empresa3);
@@ -64,11 +64,10 @@ namespace DemoCs
          Linea linea1 = new Linea(376, 469853, equipo1, persona1);
          Linea linea2 = new Linea(376, 568432, equipo2, persona3);
          Linea linea3 = new Linea(376, 436952, equipo3, empresa3);
-         Console.WriteLine(" lineas cargadas: ");
+         Console.WriteLine("\n lineas cargadas: ");
          linea2.Suspender();
          linea3.Suspender();
          linea3.Reactivar();
-
          Console.WriteLine(linea1);
          Console.WriteLine(linea2);
          Console.WriteLine(linea3);
@@ -99,7 +98,6 @@ namespace DemoCs
          Console.WriteLine($" - {datos2}");
          Console.WriteLine($" - {datos3}");
 
-         Console.WriteLine();
          Console.WriteLine(divisor);
          Console.WriteLine(" creando paquetes...");
          Paquete paquete1 = new Paquete();
@@ -115,7 +113,7 @@ namespace DemoCs
          paquete3.AddServicio(voz3);
          paquete3.AddServicio(mensajes3);
          paquete3.AddServicio(datos3);
-         Console.WriteLine(" paquetes cargados: ");
+         Console.WriteLine("\n paquetes cargados: ");
          MostrarPaquete(paquete1);
          MostrarPaquete(paquete2);
          MostrarPaquete(paquete3);
@@ -124,7 +122,7 @@ namespace DemoCs
          Console.WriteLine(" cargando planes en lineas: ");
          linea1.Plan = paquete2;
          linea3.Plan = paquete3;
-         Console.WriteLine(" creando consumos...");
+         Console.WriteLine("\n creando consumos...");
          // linea 1
          mensajes2.NuevoConsumo(10);
          mensajes2.NuevoConsumo(30);

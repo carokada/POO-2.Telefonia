@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EntidadesCs
 {
-   public abstract class Servicio : IPlan // clase a refactorizar: servicio seria la virtual ? 
+   public abstract class Servicio : IPlan
    {
       // protected para que se pueda acceder desde datos (subclase)
       protected List<uint> consumos = new List<uint>(); // guarda los consumos del servicio ??

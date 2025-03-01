@@ -20,7 +20,6 @@ namespace EntidadesCs
       {
          get => precio;
          private set => precio = value >= 0 ? value : throw new ArgumentException(" el precio no puede ser menor a cero.");
-         // cuando o como se elige un private set
       }
 
       public string Nombre
@@ -57,7 +56,7 @@ namespace EntidadesCs
          string disponibles = "";
          foreach (var servicio in servicios)
          {
-            disponibles += servicio.GetDisponibleToString() + "\n";
+            disponibles += " ->" + servicio.GetDisponibleToString() + "\n";
          }
          return $"{disponibles}"; // cadena q concatena el rtdo del metodo homonimo de los serv asociados
       }
@@ -67,7 +66,7 @@ namespace EntidadesCs
          string consumos = "";
          foreach (var servicio in servicios)
          {
-            consumos += servicio.GetConsumosToString() + "\n";
+            consumos += " ->" + servicio.GetConsumosToString() + "\n";
          }
          return $"{consumos}"; // total de consumos en string
       }

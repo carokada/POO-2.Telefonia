@@ -10,7 +10,7 @@ namespace EntidadesCs
 
       public override void NuevoConsumo(uint valor)
       {
-         // conversiones de mb a byte ?? 
+         // conversiones de mb a byte ?? no implementado ni especificado en UML
          consumos.Add(valor);
       }
 

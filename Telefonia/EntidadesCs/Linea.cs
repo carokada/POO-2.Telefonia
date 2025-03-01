@@ -12,9 +12,10 @@ namespace EntidadesCs
 
       public ushort CodigoArea { get; set; }
       public uint Numero { get; set; }
+
       // etiqueta readonly: no se puede cambiar el valor de la var (casi como una const) 
       // private set: se puede modificar pero solo a nivel de objeto.
-      public string Estado { get; private set; } 
+      public string Estado { get; private set; }
 
       public Linea(ushort codigoArea, uint numero, Equipo equipo, Cliente cliente)
       {
@@ -23,7 +24,7 @@ namespace EntidadesCs
          Equipo = equipo;
          Cliente = cliente;
 
-         Reactivar(); // esta bien aplicado OK
+         Reactivar();
       }
 
       public void Suspender()
@@ -44,14 +45,7 @@ namespace EntidadesCs
 
       public override string ToString()
       {
-         if (Estado == "suspendida")
-         {
-            return $"{Cliente.Nombre}: {CodigoArea}-{Numero} ({Estado})";
-         }
-         else
-         {
-            return $"{Cliente.Nombre}: {CodigoArea}-{Numero}";
-         }
+         return $"{Cliente.Nombre}: {CodigoArea}-{Numero} {(Estado == "suspendida" ? $"({Estado})" : "")}";
       }
    }
 }
